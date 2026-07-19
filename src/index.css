@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+/* Floating Hearts */
+
+@keyframes floatingHeart {
+  0% {
+    transform: translateY(0) scale(0.7) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: translateY(-50vh) translateX(20px) scale(1);
+  }
+
+  100% {
+    transform: translateY(-110vh) translateX(-30px) scale(1.2)
+      rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-floatingHeart {
+  animation-name: floatingHeart;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
